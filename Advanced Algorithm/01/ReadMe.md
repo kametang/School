@@ -9,7 +9,9 @@ Need Big Number
 
 -----------------------------------------
 Usage:
-./fibonacci [-l] & input nth
+
+    ./fibonacci [-l] & input nth
 
 Parameter:
+
     -l : list all result until nth.
