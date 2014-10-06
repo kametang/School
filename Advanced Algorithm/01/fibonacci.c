@@ -14,8 +14,8 @@ int FnLen(Fibonacci *fn){return strlen(fn->n);}
 
 Fibonacci *FnInit(int n){
     Fibonacci *fn = (Fibonacci*)malloc(sizeof(Fibonacci)*n);
-    bzero(fn[0].n, NUMBER_LENGTH);
-    bzero(fn[1].n, NUMBER_LENGTH);
+    memset(fn[0].n, 0, NUMBER_LENGTH);
+    memset(fn[1].n, 0, NUMBER_LENGTH);
     fn[0].n[0] = '1';
     fn[1].n[0] = '1';
     return fn;
@@ -29,7 +29,7 @@ void FnAdd(Fibonacci *fn, int res_no, int added1_no, int added2_no){
     int a1 = len_a1-1;
     int a2 = len_a2-1;
     int res = len_res-1;
-    bzero(fn[res_no].n, NUMBER_LENGTH);
+    memset(fn[res_no].n, 0, NUMBER_LENGTH);
     while(res >= 0){
 
         fn[res_no].n[res] =
