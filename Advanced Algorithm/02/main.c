@@ -42,6 +42,7 @@ double circleF(int s, int n, int k, double *p){
             for(j = 1; j < i; j++){
                 t *= 1-p[j];
             }
+	    printf("CF(%d, %d, %d)\n", i+1, n+i-1, k);
             r += t*circleL(1 , n-1, k, p+i);
         }
         return r;
@@ -61,6 +62,7 @@ double circleL(int s, int n, int k, double *p){
             for(j = i+1; j <= n; j++){
                 t *= 1-p[j];
             }
+            printf("\tRL(%d, %d, %d)\n", s, i-1, k);
             r += t*circleL(s, i-1, k, p);
         }
     }
